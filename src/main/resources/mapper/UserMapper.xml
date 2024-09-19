@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.logether.user.mapper.UserMapper">
+
+    <select id="findByUserId" parameterType="String" resultType="com.logether.user.domain.UserDTO">
+        SELECT
+            user_id AS userId,
+            user_pw AS userPw
+        FROM
+            user
+        WHERE
+            user_id = #{userId}
+    </select>
+
+</mapper>
