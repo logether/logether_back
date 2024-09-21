@@ -23,7 +23,9 @@ public class  JwtAuthenticationFilter extends OncePerRequestFilter {
     private final UserDetailsService userDetailsService;
 
     private static final String[] EXCLUDED_PATHS = {
-            "/user/login"
+            "/user/login",
+            "/swagger-ui/**",
+            "/v3/api-docs/**"
     };
 
     @Override

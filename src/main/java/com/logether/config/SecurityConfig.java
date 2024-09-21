@@ -24,7 +24,9 @@ public class SecurityConfig {
 
     private static final String[] BASIC_LIST = {
             "/jwt/**",
-            "/user/**"
+            "/user/**",
+            "/swagger-ui/**",
+            "/v3/api-docs/**"
     };
 
     @Bean
