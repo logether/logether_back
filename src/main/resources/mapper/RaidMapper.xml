@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.logether.raid.mapper.RaidMapper">
+
+    <insert id="raidAdd" parameterType="raid">
+        INSERT INTO raid
+            (user_id, raid_name, raid_page, raid_cnt, raid_entry, raid_pw)
+        VALUES
+            (#{userId}, #{raidName}, #{raidPage}, #{raidCnt}, #{raidEntry}, #{raidPw})
+    </insert>
+
+    <select id="findByRaidPage" parameterType="String">
+        SELECT
+            raid_page AS raidPage
+        FROM
+            raid
+        WHERE
+            raid_page = #{raidPage}
+    </select>
+
+</mapper>
